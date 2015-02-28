@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VisugDemo.MainPage"             
+             Title="Visug demo">
+  <StackLayout VerticalOptions="Center" Padding="20,0,20,0">
+    <Button Text="Simple Renderer" Command="{Binding NavigateCommand}" CommandParameter="FirstPage" Style="{ StaticResource ButtonStyle}"></Button>
+    <Button Text="Custom Control" Command="{Binding NavigateCommand}" CommandParameter="SecondPage" Style="{ StaticResource ButtonStyle}"></Button>
+    <Button Text="Native Styling" Command="{Binding NavigateCommand}" CommandParameter="ThirdPage" Style="{ StaticResource ButtonStyle}"></Button>
+    <Button Text="Style inheritance" x:Name="DisabledButton"  Command="{Binding NavigateCommand}" CommandParameter="FourthPage" IsEnabled="{Binding IsEnabled}" Style="{ StaticResource ButtonStyle}"></Button>
+    <Button Text="Disabled button (bug)" x:Name="DisabledButtonBug"  Command="{Binding NavigateCommand}" CommandParameter="FourthPage" IsEnabled="false" Style="{ StaticResource ButtonStyle}"></Button>
+    <Button Text="Enable/disable button" Clicked="Button_Clicked" Style="{ StaticResource ButtonStyle}"></Button>
+    <Button Text="Dependecy Injection" Command="{Binding NavigateCommand}" CommandParameter="FifthPage"  Style="{ StaticResource ButtonStyle}"></Button>
+  </StackLayout>
+</ContentPage>

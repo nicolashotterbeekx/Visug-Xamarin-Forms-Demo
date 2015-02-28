@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:VisugDemo.Controls;assembly=VisugDemo"
+             x:Class="VisugDemo.FirstPage"
+             Title="Simple Renderer">
+  <ContentView>
+    <StackLayout Padding="20,20,20,20">
+      <Label Text="A normal entry"></Label>
+      <Entry Placeholder="normal"></Entry>
+      <Label Text="A custom entry"></Label>      
+      <controls:MyCustomEntry Placeholder="Custom" BorderColor="Blue" BorderThickness="2"></controls:MyCustomEntry>      
+    </StackLayout>
+
+  </ContentView>
+</ContentPage>

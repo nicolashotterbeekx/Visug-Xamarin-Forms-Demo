@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:VisugDemo.Controls;assembly=VisugDemo"             
+             x:Class="VisugDemo.Controls.MyCustomEntryWrapper"
+             Spacing="0"
+             Padding="0">
+  <ContentView Padding="12,0,12,0">
+    <Label x:Name="lblPlaceholder" Text="{Binding Placeholder}" VerticalOptions="Center" HorizontalOptions="Start" />
+    <ContentView.IsVisible>
+      <OnPlatform x:TypeArguments="x:Boolean">
+        <OnPlatform.iOS>False</OnPlatform.iOS>
+        <OnPlatform.Android>False</OnPlatform.Android>
+        <OnPlatform.WinPhone>True</OnPlatform.WinPhone>
+      </OnPlatform>
+    </ContentView.IsVisible>
+  </ContentView>
+  <controls:MyCustomEntry x:Name="LblEntry" Text="{Binding Text}"/>
+</StackLayout>
